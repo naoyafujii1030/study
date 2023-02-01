@@ -1,0 +1,49 @@
+@use './mixins/media.scss' as *;
+
+:root {
+  //colors
+  --color-text: #333;
+
+  // font-families
+  --font: 'Noto Sans', sans-serif;
+
+  // layout
+  --side-padding: 3rem;
+}
+
+html {
+  font-size: calc(1000vw / 750);
+  @include pc {
+    font-size: 62.5%;
+  }
+}
+
+body {
+  font-family: var(--font);
+  font-feature-settings: 'palt';
+  font-size: 1.6rem;
+}
+
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline-width: revert;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
